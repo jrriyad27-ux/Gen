@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConnectMe - Google Login</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <title>Social Magic App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div id="auth-wrapper" class="auth-wrapper">
         <div class="login-card">
-            <h1>Welcome to ConnectMe</h1>
-            <p>Join our community with just one click</p>
-            <div class="social-login">
-                <button id="google-signin-btn" class="google-btn">
-                    <i class="fab fa-google"></i> Sign in with Google
-                </button>
-            </div>
+            <h1>ConnectMe</h1>
+            <p>Experience the Magic of Connection</p>
+            <button id="google-signin-btn" class="google-btn">
+                <i class="fab fa-google"></i> Continue with Google
+            </button>
         </div>
     </div>
 
@@ -30,22 +28,50 @@
         <main id="main-content">
             <div class="page-content active" id="home">
                 <div class="feed" id="post-feed">
-                    <div class="welcome-msg">Successfully Logged In!</div>
+                    <div class="welcome-box">Welcome to your Feed!</div>
                 </div>
             </div>
         </main>
 
-        <nav class="navigation">
+        <div class="navigation">
             <ul>
-                <li class="list active" data-target="home"><a href="#"><span class="icon"><ion-icon name="home-outline"></ion-icon></span></a></li>
-                <li class="list" data-target="profile"><a href="#"><span class="icon"><ion-icon name="person-outline"></ion-icon></span></a></li>
-                <li class="list" data-target="settings"><a href="#"><span class="icon"><ion-icon name="settings-outline"></ion-icon></span></a></li>
+                <li class="list active" data-target="home">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li class="list" data-target="profile">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="text">Profile</span>
+                    </a>
+                </li>
+                <li class="list" data-target="message">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+                        <span class="text">Message</span>
+                    </a>
+                </li>
+                <li class="list" data-target="photos">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="camera-outline"></ion-icon></span>
+                        <span class="text">Photos</span>
+                    </a>
+                </li>
+                <li class="list" data-target="settings">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                        <span class="text">Settings</span>
+                    </a>
+                </li>
                 <div class="indicator"></div>
             </ul>
-        </nav>
+        </div>
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="script.js" type="module"></script>
 </body>
 </html>
