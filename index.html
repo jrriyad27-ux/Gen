@@ -3,60 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - My Social App</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>ConnectMe - Google Login</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="auth-wrapper" id="auth-wrapper">
-        <div class="container" id="container">
-            <div class="form-container sign-up-container">
-                <form id="signup-form">
-                    <h1>Create Account</h1>
-                    <div class="social-container">
-                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <span>or use your email for registration</span>
-                    <input type="text" id="signup-name" placeholder="Name" required />
-                    <input type="email" id="signup-email" placeholder="Email" required />
-                    <input type="password" id="signup-pass" placeholder="Password" required />
-                    <button type="submit">Sign Up</button>
-                </form>
-            </div>
-            <div class="form-container sign-in-container">
-                <form id="login-form">
-                    <h1>Sign in</h1>
-                    <div class="social-container">
-                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <span>or use your account</span>
-                    <input type="email" id="login-email" placeholder="Email" required />
-                    <input type="password" id="login-pass" placeholder="Password" required />
-                    <a href="#">Forgot your password?</a>
-                    <button type="submit">Sign In</button>
-                </form>
-            </div>
-            <div class="overlay-container">
-                <div class="overlay">
-                    <div class="overlay-panel overlay-left">
-                        <h1>Welcome Back!</h1>
-                        <p>To keep connected with us please login with your personal info</p>
-                        <button class="ghost" id="signIn">Sign In</button>
-                    </div>
-                    <div class="overlay-panel overlay-right">
-                        <h1>Hello, Friend!</h1>
-                        <p>Enter your personal details and start journey with us</p>
-                        <button class="ghost" id="signUp">Sign Up</button>
-                    </div>
-                </div>
+
+    <div id="auth-wrapper" class="auth-wrapper">
+        <div class="login-card">
+            <h1>Welcome to ConnectMe</h1>
+            <p>Join our community with just one click</p>
+            <div class="social-login">
+                <button id="google-signin-btn" class="google-btn">
+                    <i class="fab fa-google"></i> Sign in with Google
+                </button>
             </div>
         </div>
     </div>
-    
+
+    <div id="app-content" style="display:none;">
+        <header class="app-header">
+            <h2>ConnectMe</h2>
+            <button id="logout-btn"><ion-icon name="log-out-outline"></ion-icon></button>
+        </header>
+
+        <main id="main-content">
+            <div class="page-content active" id="home">
+                <div class="feed" id="post-feed">
+                    <div class="welcome-msg">Successfully Logged In!</div>
+                </div>
+            </div>
+        </main>
+
+        <nav class="navigation">
+            <ul>
+                <li class="list active" data-target="home"><a href="#"><span class="icon"><ion-icon name="home-outline"></ion-icon></span></a></li>
+                <li class="list" data-target="profile"><a href="#"><span class="icon"><ion-icon name="person-outline"></ion-icon></span></a></li>
+                <li class="list" data-target="settings"><a href="#"><span class="icon"><ion-icon name="settings-outline"></ion-icon></span></a></li>
+                <div class="indicator"></div>
+            </ul>
+        </nav>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="script.js" type="module"></script>
 </body>
-                          </html>
+</html>
